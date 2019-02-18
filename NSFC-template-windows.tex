@@ -1,0 +1,201 @@
+%!TEX program = xelatex
+\documentclass[a4paper,12pt]{article}
+% 使用UTF8编码, punct--对中文标点显示进行优化
+\usepackage[UTF8, punct]{ctex}
+% 定义页面尺寸
+\usepackage[a4paper, left = 3.2cm, right = 3.2cm, top = 2.54cm, bottom = 2.54cm]{geometry}
+% 使用xeCJK处理中文
+\usepackage{xeCJK}
+% 设置文档主字体为楷体(对Windows平台有效, 对MAC OS需要另外的参数设置)
+\setCJKmainfont{KaiTi}
+
+% 缩小公式段前段后空间
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+
+% 定义行距
+\linespread{1.56}
+
+% 引入常用宏包
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tabularx}
+\usepackage[framed, amsmath,thmmarks,hyperref]{ntheorem}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage[colorlinks, anchorcolor=blue, linkcolor=magenta, citecolor=blue, urlcolor=cyan]{hyperref}
+
+% 设置参考文献样式
+\usepackage[numbers,sectionbib]{natbib}
+\makeatletter
+	\renewcommand\@biblabel[1]{{[#1]\hfill}}
+\makeatother
+\setlength{\bibsep}{0.5ex}
+
+\renewcommand\bibname{参考文献}
+\renewcommand{\bibfont}{\footnotesize}
+
+
+% 拾取NSFC Word模板的蓝色
+\definecolor{NSFCblue}{RGB}{0, 112, 192}
+\newcommand{\NSFCblue}[1]{{\color{NSFCblue} #1}}
+
+% NSFC定义的蓝色并且加粗
+\newcommand{\NSFCnote}[1]{\textbf{\NSFCblue{#1}}}
+
+
+\begin{document}
+
+% 第二页以后页码空白
+\pagestyle{empty} 
+
+% 居中的标题
+\begin{center}
+	\Large{\textbf{重点项目申请书撰写提纲}}\\
+    (2016版)
+\end{center}
+
+重点项目申请书由信息表格、正文、个人简历和附件构成。
+
+\textbf{一、信息表格：}
+
+包括项目基本信息、项目主要参与者和项目资金预算表，填写时应按操作提示在指定的位置选择或按要求输入正确信息；
+项目资金预算表应按照《国家自然科学基金资助项目资金管理办法》、《国家自然科学基金项目资金预算表编制说明》认真填写，应保证信息真实、准确。
+
+\textbf{二、正文：} 参照以下提纲撰写，要求内容翔实、清晰，层次分明，标题突出。\NSFCnote{请勿删除或改动下述提纲标题及括号中的文字。}
+
+
+\NSFCnote{(一) 立项依据与研究内容(5000-10000字):} 
+
+\NSFCnote{1．项目的立项依据} (研究意义、国内外研究现状及发展动态分析,需结合科学研究发展趋势来论述科学意义;或结合国民经济和社会发展中迫切需要解决的关键科技问题来论述其应用前景。附主要参考文献目录);
+
+\textbf{1.1 研究背景}
+
+XXX
+
+\textbf{1.2 国内外现状}
+
+XXX
+
+\textbf{1.3 存在的问题}
+
+XXX
+
+
+% 在此处设置参考文献样式和参考文献格式
+\bibliographystyle{alpha}
+\bibliography{yourbibfile}
+
+\vspace{1em}
+\NSFCnote{2．项目的研究内容、研究目标,以及拟解决的关键科学问题（此部分为重点阐述内容）;}
+
+\textbf{2.1 研究内容}
+
+XXX
+
+\textbf{2.2 研究目标}
+
+XXX
+
+\textbf{2.3 拟解决的科学问题}
+
+XXX
+
+\vspace{1em}
+
+\NSFCnote{3．拟采取的研究方案及可行性分析（包括研究方法、技术路线、实验手段、关键技术等说明）;}
+
+XXX
+
+\vspace{1em}
+
+\NSFCnote{4．本项目的特色与创新之处;}
+
+\vspace{1em}
+
+\NSFCnote{5．年度研究计划及预期研究结果（包括拟组织的重要学术交流活动、国际合作与交流计划等）。}
+
+\vspace{1em}
+\NSFCnote{（二）研究基础与工作条件}
+
+\NSFCnote{1．研究基础（与本项目相关的研究工作积累和已取得的研究工作成绩）；}
+
+XXX
+
+
+\NSFCnote{2．工作条件（包括已具备的实验条件，尚缺少的实验条件和拟解决的途径，包括利用国家实验室、
+国家重点实验室和部门重点实验室等研究基地的计划与落实情况）；}
+
+XXX
+
+
+\NSFCnote{3．正在承担的与本项目相关的科研项目情况（申请人和项目组主要参与者正在承担的与本项目相关的科研项目情况，
+包括国家自然科学基金的项目和国家其他科技计划项目，要注明项目的名称和编号、经费来源、起止年月、与本项目的关系及负责的内容等）；}
+
+XXX
+
+
+\NSFCnote{4．完成国家自然科学基金项目情况（对申请人负责的前一个已结题科学基金项目（项目名称及批准号）完成情况、后续研究进展及与本申请项目的关系加以详细说明。另附该已结题项目研究工作总结摘要（限500字）和相关成果的详细目录）。}
+
+XXX
+
+\NSFCnote{（三）其他需要说明的问题}
+
+\NSFCnote{1. 申请人同年申请不同类型的国家自然科学基金项目情况（列明同年申请的其他项目的项目类型、项目名称信息，并说明与本项目之间的区别与联系）。} 
+
+XXX
+
+\NSFCnote{2. 具有高级专业技术职务（职称）的申请人或者主要参与者是否存在同年申请或者参与申请国家自然科学基金项目的单位不一致的情况；如存在上述情况，列明所涉及人员的姓名，申请或参与申请的其他项目的项目类型、项目名称、单位名称、上述人员在该项目中是申请人还是参与者，并说明单位不一致原因。}
+
+XXX 
+
+\NSFCnote{3. 具有高级专业技术职务（职称）的申请人或者主要参与者是否具有高级专业技术职务（职称）
+的申请人或者主要参与者是否存在与正在承担的国家自然科学基金项目的单位不一致的情况；
+如存在上述情况，列明所涉及人员的姓名，正在承担项目的批准号、项目类型、项目名称、单位名称、起止年月，并说明单位不一致原因。}
+
+XXX
+
+\NSFCnote{4. 其他。}
+
+XXX
+
+\textbf{三、个人简历：}
+
+1. 申请人简历（由系统根据申请人在线填写的个人简介信息、承担项目情况和个人研究成果自动生成）
+
+2. 主要参与者简历（在读研究生除外）（请下载参与者简历模板填写后上传；\NSFCblue{除非特殊说明，请勿删除或改动简历模板中蓝色字体的标题及相应说明文字）}
+
+\textbf{四、附件}
+
+\textbf{（一）附件目录}
+
+在附件目录中列出所有上传的电子附件材料清单。
+
+\textbf{（二）附件材料（逐项上传）}
+
+上传的电子附件材料应为项目申请人和主要参与者取得的代表性成果或者科技奖励。
+
+1．提供5篇近5年申请人本人发表的与申请项目相关的代表性论文电子版文件
+\textbf{（对于此项附件，部分科学部还有提交纸质首页复印件的要求，具体参见本年度《国家自然科学基金项目指南》正文“重点项目”部分相关科学部要求）；}
+
+2．如上传专著，可以只提供著作封面、摘要、目录、版权页等；
+
+3．如上传所获科技奖励，应提供国家级科技奖励（国家自然科学奖、国家发明奖、国家科学技术进步奖）、省部级奖励（二等以上）奖励证书的电子版扫描文件；
+
+4．如上传专利或其他公认突出的创造性成果或成绩，应提供证明材料的电子版扫描文件；
+
+5．在国际学术会议上作大会报告、特邀报告，应提供邀请信或通知的电子版扫描文件；
+
+6．根据项目申请的需要，附件材料\textbf{还可能}包含以下电子版扫描文件：依托单位非全职聘用的境内外人员的聘任合同复印件和相关说明材料、伦理委员会证明、加盖依托单位公章的国家社会科学基金结项证书复印件、依托单位生物安全保障承诺等。
+\textbf{具体要求参见本年度《国家自然科学基金项目指南》“申请须知”部分和正文“重点项目”部分相关科学部要求。}
+
+\textbf{特别提示：上述附件第6项还需提供纸质原件，随纸质《申请书》一同报送。}
+
+
+\end{document}
+
+
+
+
+
